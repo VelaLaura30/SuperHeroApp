@@ -8,8 +8,8 @@ import com.example.superheroapp.databinding.SuperheroViewBinding
 
 class RVSuperheroAdapter(
 
-    private val onFriendsClickListener: (id: Int) -> Unit,
-    private val onEnemiesClickListener: (id: Int) -> Unit,
+    private val onFriendsClickListener: (id: String) -> Unit,
+    private val onEnemiesClickListener: (id: String) -> Unit,
     ): RecyclerView.Adapter<SuperHeroPostViewHolder>() {
 
         var superhero = emptyList<Superhero>()

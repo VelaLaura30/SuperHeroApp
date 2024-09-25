@@ -7,18 +7,25 @@ import com.example.superheroapp.databinding.SuperheroViewBinding
 class SuperHeroPostViewHolder(
 
     private val binding: SuperheroViewBinding,
-    private val onFriendsClickListener: (position: Int) -> Unit,
-    private val onEnemiesClickListener: (id: Int) -> Unit
+    private val onFriendsClickListener: (id: String) -> Unit,
+    private val onEnemiesClickListener: (id: String) -> Unit
 ): RecyclerView.ViewHolder(binding.root) {
+
     fun bind(superhero: Superhero) {
         with(binding) {
-            btnFriends.setOnClickListener {
-                onFriendsClickListener(superhero.id)
-            }
-            btnEnemies.setOnClickListener {
-                onEnemiesClickListener(superhero.id)
-            }
+            tvIdSuperhero.text = superhero.id.toString()
+            tvNameSuperhero.text = superhero.name
+            tvAlternativeNameSuperhero.text = superhero.alterName
+            ivCharacterPicture.setImageResource(superhero.photo)
 
+        btnFriends.setOnClickListener {
+            onFriendsClickListener(superhero.id.toString())
+        }
+        btnEnemies.setOnClickListener {
+            onEnemiesClickListener(superhero.id.toString())
         }
     }
+}
+
+
 }
