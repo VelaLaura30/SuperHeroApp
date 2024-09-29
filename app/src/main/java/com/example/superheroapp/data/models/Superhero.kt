@@ -15,6 +15,7 @@ data class Superhero(
     // List of Enemy ids
     val enemies: List<Int>,
     // List of Location ids
+    // List of Location ids
     val locations: List<Int>
 
 )
