@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRV() {
+        val allPowers = superheroViewModel.getAllPowers()
         rvSuperheroAdapter = RVSuperheroAdapter(
+            allPowers,
             onFriendsClickListener = { superheroId ->
                 launchFriendActivity(superheroId)
             },
