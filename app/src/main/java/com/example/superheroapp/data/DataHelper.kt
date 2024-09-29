@@ -13,7 +13,6 @@ fun generateSuperheroes(): List<Superhero> {
     val locations = generateLocations()
     val powers = generatePowers()
 
-    // Dummy data for superheroes
     val superheroNames = listOf("Superman", "Batman", "Wonder Woman", "Flash", "Aquaman", "Spider-Man", "Iron Man", "Captain America", "Hulk", "Thor")
     val alterNames = listOf("Clark Kent", "Bruce Wayne", "Diana Prince", "Barry Allen", "Arthur Curry", "Peter Parker", "Tony Stark", "Steve Rogers", "Bruce Banner", "Thor Odinson")
 
