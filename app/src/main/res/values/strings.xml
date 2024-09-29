@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Super Hero App</string>
     <string name="enemy_image" />
+    <string name="friends">Friends</string>
+    <string name="enemies">Enemies</string>
+    <string name="poderes">PODERES</string>
 </resources>
