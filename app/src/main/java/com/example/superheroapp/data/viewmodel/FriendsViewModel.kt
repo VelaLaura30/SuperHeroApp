@@ -7,8 +7,10 @@ import androidx.lifecycle.viewModelScope
 import com.example.superheroapp.ui.screens.friends.uiState.FriendsUiState
 import com.example.superheroapp.data.generateSuperheroes
 import com.example.superheroapp.data.models.Superhero
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 
+@HiltViewModel
 class FriendsViewModel : ViewModel() {
 
     private val _uiState = MutableLiveData<FriendsUiState>()

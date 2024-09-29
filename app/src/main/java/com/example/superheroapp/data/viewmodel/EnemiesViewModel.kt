@@ -6,11 +6,13 @@ import com.example.superheroapp.ui.screens.enemies.uiState.EnemiesUiState
 import com.example.superheroapp.data.generateEnemies
 import com.example.superheroapp.data.generateSuperheroes
 import com.example.superheroapp.data.models.Enemy
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+@HiltViewModel
 class EnemiesViewModel : ViewModel() {
 
     private val _uiState = MutableStateFlow(EnemiesUiState())

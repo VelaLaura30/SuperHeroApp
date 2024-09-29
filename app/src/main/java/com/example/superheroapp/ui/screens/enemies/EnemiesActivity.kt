@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.superheroapp.ui.screens.enemies.rv.RVEnemiesAdapter
 import kotlinx.coroutines.launch
 import com.example.superheroapp.databinding.ActivityEnemiesBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class EnemiesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEnemiesBinding
