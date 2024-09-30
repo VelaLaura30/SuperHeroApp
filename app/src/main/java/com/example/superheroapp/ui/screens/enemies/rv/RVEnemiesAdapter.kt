@@ -7,9 +7,15 @@ import com.example.superheroapp.R
 import com.example.superheroapp.data.models.Enemy
 
 
+
 class RVEnemiesAdapter(
     var enemies: List<Enemy> = listOf()
 ) : RecyclerView.Adapter<EnemyViewHolder>() {
+
+    /*
+     COMENTARIO LAURA: Hacer uso de  ViewBinding en lugar de inflar el layout manualmente para
+     eliminar la necesidad de hacer casting y optimizar el código.
+     */
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EnemyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_enemy, parent, false)

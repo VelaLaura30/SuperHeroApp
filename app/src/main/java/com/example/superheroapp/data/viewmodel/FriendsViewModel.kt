@@ -14,6 +14,12 @@ import javax.inject.Inject
 @HiltViewModel
 class FriendsViewModel @Inject constructor(): ViewModel() {
 
+    /*}
+    COMENTARIO LAURA: Debes mantener un uso constante ya asea de StateFlow o LiveData,
+    dado que en la clase actual estas usando LiveData y en la clase EnemiesViewModel,
+    usas StateFlow
+     */
+
     private val _uiState = MutableLiveData<FriendsUiState>()
     val uiState: LiveData<FriendsUiState> = _uiState
 

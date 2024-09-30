@@ -13,8 +13,10 @@ import com.example.superheroapp.databinding.ActivitySuperheroBinding
 import com.example.superheroapp.ui.screen.superhero.rv.RVSuperheroAdapter
 import com.example.superheroapp.ui.screens.enemies.EnemiesActivity
 import com.example.superheroapp.ui.screens.friends.FriendsActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SuperHeroActivity : AppCompatActivity() {
 
     private val superheroViewModel: SuperheroViewModel by viewModels()
