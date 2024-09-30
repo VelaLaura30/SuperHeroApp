@@ -11,13 +11,14 @@ import com.example.superheroapp.ui.screens.enemies.rv.RVEnemiesAdapter
 import kotlinx.coroutines.launch
 import com.example.superheroapp.databinding.ActivityEnemiesBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
 class EnemiesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEnemiesBinding
-    private lateinit var rvEnemiesAdapter: RVEnemiesAdapter
+    @Inject lateinit var rvEnemiesAdapter: RVEnemiesAdapter
     private val enemiesViewModel: EnemiesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {

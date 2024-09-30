@@ -11,9 +11,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class EnemiesViewModel : ViewModel() {
+class EnemiesViewModel @Inject constructor(): ViewModel() {
 
     private val _uiState = MutableStateFlow(EnemiesUiState())
     val uiState: StateFlow<EnemiesUiState> = _uiState.asStateFlow()

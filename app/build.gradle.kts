@@ -45,6 +45,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    kapt {
+        javacOptions {
+            option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
+        }
+    }
 }
 
 dependencies {

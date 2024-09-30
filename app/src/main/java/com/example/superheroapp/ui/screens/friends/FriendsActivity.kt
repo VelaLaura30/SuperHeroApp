@@ -8,12 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.superheroapp.data.viewmodel.FriendsViewModel
 import com.example.superheroapp.databinding.ActivityFriendsBinding
 import com.example.superheroapp.ui.screens.friends.rv.FriendAdapter
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class FriendsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFriendsBinding
     private lateinit var viewModel: FriendsViewModel
-    private lateinit var rvFriendsAdapter: FriendAdapter
+    @Inject lateinit var rvFriendsAdapter: FriendAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

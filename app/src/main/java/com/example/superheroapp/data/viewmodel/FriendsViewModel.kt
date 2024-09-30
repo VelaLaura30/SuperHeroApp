@@ -9,9 +9,10 @@ import com.example.superheroapp.data.generateSuperheroes
 import com.example.superheroapp.data.models.Superhero
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class FriendsViewModel : ViewModel() {
+class FriendsViewModel @Inject constructor(): ViewModel() {
 
     private val _uiState = MutableLiveData<FriendsUiState>()
     val uiState: LiveData<FriendsUiState> = _uiState
