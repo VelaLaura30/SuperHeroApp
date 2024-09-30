@@ -30,8 +30,8 @@ class EnemiesViewModel : ViewModel() {
 
     private fun fetchEnemies(superheroId: Int): List<Enemy> {
         val superheroes = generateSuperheroes()
-        return superheroes.find { it.id == superheroId }?.enemies?.map { enemyId ->
-            generateEnemies().find { it.id == enemyId }!!
+        return superheroes.find { it.id == superheroId }?.enemies?.mapNotNull { enemyId ->
+            generateEnemies().find { it.id == enemyId }
         } ?: emptyList()
     }
 }

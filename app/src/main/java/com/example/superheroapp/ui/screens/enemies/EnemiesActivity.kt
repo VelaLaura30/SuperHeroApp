@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 import com.example.superheroapp.databinding.ActivityEnemiesBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class EnemiesActivity : AppCompatActivity() {
 
@@ -24,7 +25,8 @@ class EnemiesActivity : AppCompatActivity() {
         binding = ActivityEnemiesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val superheroId = 11
+        val superheroId = intent.extras?.getInt("superheroId") ?: return
+
         initRecyclerView()
         observeUiState()
         enemiesViewModel.getEnemies(superheroId)

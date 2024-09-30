@@ -11,8 +11,8 @@ class SuperHeroViewHolder(
 
     private val binding: SuperheroViewBinding,
     private val powerAdapter: RVPowerAdapter,
-    private val onFriendsClickListener: (id: String) -> Unit,
-    private val onEnemiesClickListener: (id: String) -> Unit
+    private val onFriendsClickListener: (id: Int) -> Unit,
+    private val onEnemiesClickListener: (id: Int) -> Unit
 ): RecyclerView.ViewHolder(binding.root) {
 
     fun bind(superhero: Superhero, allPowers: List<Power>) {
@@ -32,10 +32,10 @@ class SuperHeroViewHolder(
             rvPowers.layoutManager = LinearLayoutManager(itemView.context)
 
         btnFriends.setOnClickListener {
-            onFriendsClickListener(superhero.id.toString())
+            onFriendsClickListener(superhero.id)
         }
         btnEnemies.setOnClickListener {
-            onEnemiesClickListener(superhero.id.toString())
+            onEnemiesClickListener(superhero.id)
         }
     }
 }

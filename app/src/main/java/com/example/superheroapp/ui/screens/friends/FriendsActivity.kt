@@ -20,7 +20,8 @@ class FriendsActivity : AppCompatActivity() {
         binding = ActivityFriendsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val superheroId = 11
+        val superheroId = intent.extras?.getInt("superheroId") ?: return
+
 
         viewModel = ViewModelProvider(this).get(FriendsViewModel::class.java)
         viewModel.getFriends(superheroId)

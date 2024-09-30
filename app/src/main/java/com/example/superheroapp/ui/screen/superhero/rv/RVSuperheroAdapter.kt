@@ -11,8 +11,8 @@ import com.example.superheroapp.ui.screen.power.rv.RVPowerAdapter
 class RVSuperheroAdapter(
 
     private val allPowers: List<Power>,
-    private val onFriendsClickListener: (id: String) -> Unit,
-    private val onEnemiesClickListener: (id: String) -> Unit,
+    private val onFriendsClickListener: (id: Int) -> Unit,
+    private val onEnemiesClickListener: (id: Int) -> Unit,
     ): RecyclerView.Adapter<SuperHeroViewHolder>() {
 
         var superhero = emptyList<Superhero>()

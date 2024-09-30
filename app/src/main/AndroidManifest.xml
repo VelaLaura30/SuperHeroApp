@@ -12,8 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperHeroApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ui.screens.enemies.EnemiesActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.screens.friends.FriendsActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".ui.screen.superhero.SuperHeroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
